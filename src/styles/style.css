@@ -44,14 +44,16 @@ nav ul li a {
     background-image: url('imagenes/Background.webp');
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 60vh; /* Mantén la altura proporcional */
     display: flex;
     justify-content: left;
     align-items: center;
     text-align: left;
     color: #000000;
     padding: 0 20px;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
 }
+
 
 .hero-content h1 {
     font-size: 3em;
@@ -142,7 +144,6 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-
 footer {
     background-color: #333;
     color: #fff;
@@ -150,6 +151,7 @@ footer {
     padding: 20px;
 }
 
+/* Media Queries para Tablets */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -197,12 +199,37 @@ footer {
     }
 }
 
+/* Media Queries para Móviles */
 @media (max-width: 480px) {
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
     .hero-content h1 {
         font-size: 2em;
     }
 
     .hero-content p {
         font-size: 1em;
+    }
+
+    .menu-item {
+        flex-basis: 100%;
+        margin: 5px;
+    }
+
+    .contact form input, .contact form textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .contact form button {
+        padding: 8px;
+        font-size: 0.9em;
     }
 }

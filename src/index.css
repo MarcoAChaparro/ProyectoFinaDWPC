@@ -24,89 +24,43 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-/* HERO SECTION */
-.hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px; 
-  margin: 20px auto; 
-  padding: 20px;
-  text-align: left;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.hero img {
-  width: 50%; /* Ocupa la mitad del ancho en pantallas grandes */
-  height: auto; /* Mantiene proporciones */
-  border-radius: 10px; 
-}
-
-.hero-content {
-  flex: 1; /* Ajusta el tamaño del contenido */
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem; /* Título más grande en pantallas grandes */
-  color: #ff9900; 
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 1.2rem; 
-  color: white;
-  margin-bottom: 20px;
-}
-
-.hero-content .btn {
-  background-color: #ff9900; 
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.hero-content .btn:hover {
-  background-color: #e68a00; 
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column; 
-    text-align: center; 
-    padding: 10px;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-
-  .hero img {
-    width: 90%; /* Imagen ocupa el 90% del ancho disponible */
-    margin-bottom: 20px;
+  a:hover {
+    color: #747bff;
   }
-
-  .hero-content h1 {
-    font-size: 2rem; /* Reduce el tamaño del título */
-  }
-
-  .hero-content p {
-    font-size: 1rem; /* Texto más pequeño */
-  }
-
-  .hero-content .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem; /* Botón más compacto */
+  button {
+    background-color: #f9f9f9;
   }
 }
